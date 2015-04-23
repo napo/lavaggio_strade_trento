@@ -23,7 +23,7 @@
         noWrap: true
       });
       var map = L.map('map', {
-        layers: [mapquest],
+        layers: [mapbox],
         center: new L.LatLng(46.0664,11.1412),
         zoom: 12,
         maxBounds: [[46.14036,10.90805], [45.99243, 11.37428]]
