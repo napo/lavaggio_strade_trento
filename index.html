@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Lavaggio strade a Trento - marzo-maggio 2015</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=800, user-scalable=no">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.ie.css" />
+      <link rel="stylesheet" href="http://domoritz.de/leaflet-locatecontrol//dist/L.Control.Locate.ie.min.css"/>
+      <![endif]-->
+    <link rel="stylesheet" href="css/leaflet.timeline.css" />   
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="js/L.Control.Locate.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/leaflet.timeline.js"></script> 
+  </head>
+  <body>
+    <div id="info">
+      <h1>Lavaggio strade a Trento</h1>
+       <h2>ricavato dal <a href="http://www.comune.trento.it/Comunicazione/Il-Comune-informa/In-primo-piano/Lavaggio-notturno-strade2">calendario del Comune di Trento</a>
+       e <a href="http://osm-toolserver-italia.wmflabs.org/estratti/it/comuni">stradario dai dati di OpenStreetmap</a></h2>
+       Divieto di sosta dalle 19:00 del <span id="startday"></span><br/>
+       alle 05:00 del giorno dopo.<br/>
+       <h2>Elenco delle vie interessate</h2>
+      <ul id="displayed-list"></ul>
+    </div>
+    <div id="map"></div>
+   <script src="js/lavaggio_strade.js"></script>
+   <script src="data/lavaggio_strade.geojsonp"></script>
+  </body>
+</html>
+
