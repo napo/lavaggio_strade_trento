@@ -12,7 +12,7 @@
         attribution: mapboxAttrib,
         noWrap: true
       });
-      var osm = L.tileLayer(osmUrl, {
+      var maposm = L.tileLayer(osmUrl, {
         maxZoom: 18,
         attribution: osmAttrib,
         noWrap: true
@@ -25,7 +25,7 @@
       var map = L.map('map', {
         layers: [mapquest],
         center: new L.LatLng(46.0664,11.1412),
-        zoom: 14,
+        zoom: 12,
         maxBounds: [[46.14036,10.90805], [45.99243, 11.37428]]
       });
       var defaultBounds = map.getBounds();
