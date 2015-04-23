@@ -47,12 +47,13 @@
       function updateList(timeline){
         var streets = Array()
         //map.fitBounds(timeline.getBounds());
-        try {
+        /*
+	try {
             map.panTo(timeline.getBounds().getCenter());
             map.setZoom(15);
         }
         catch (e) {}
-        
+        */
         var displayed = timeline.getDisplayed();
         var list = document.getElementById('displayed-list');
         var startday = document.getElementById('startday');
