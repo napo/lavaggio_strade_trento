@@ -43,6 +43,12 @@
             map.off('dragstart', lc._stopFollowing, lc);
         });    
 
+        function zoomtoroads(lng,lat) {
+            var latlng = L.latLng(lng, lat);
+            map.panTo(latlng);
+            map.setZoom(15);
+        return true;
+        }
 
       function updateList(timeline){
         var streets = Array()
@@ -57,7 +63,7 @@
         var displayed = timeline.getDisplayed();
         var list = document.getElementById('displayed-list');
         var startday = document.getElementById('startday');
-        var endday = document.getElementById('endday');
+        var zoomtoarea = document.getElementById('zoomtoarea');
         startday.innerHTML = moment(timeline.time).format("DD-MM-YYYY")
         list.innerHTML = "";
         displayed.forEach(function(street){
@@ -75,6 +81,11 @@
                     streets[s];
                     li.innerHTML =  streetname;
                     list.appendChild(li);
+                }
+                if (streets.length != 0) {
+                    lng=timeline.getBounds().getCenter().lng;
+                    lat = timeline.getBounds().getCenter().lat;
+		    // zoomtoarea.innerHTML='<a onClick="zoomtoroads(lng,lat);" href="#">visualizza area</a>';
                 }
             }
         }
