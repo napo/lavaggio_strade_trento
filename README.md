@@ -12,7 +12,9 @@ Il calendario è archiviato in un [PDF](https://github.com/napo/lavaggio_strade_
 ## la creazione dei dati
 Da questo PDF è stata ricostruita la lista delle vie interessate, corretto i nomi delle vie (unica chiave attraverso cui è possibile collegare le informazioni a dati geografici) e associato quindi le singole voci alle geometrie che le descrivono in OpenStreetMap.
 L'operazione di estrazione e pulizia dei nomi delle vie dal PDF è stata fatta manualmente ed ha creato un file [.csv](https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/roads/lavaggio_strade.csv) con data della giornata interessata *date* (formattata come AAAAMMGG), nome della via *name*, eventuali limiti sull'operazione del lavaggio *limit* (es. lato della strada o tratto interessato), giorno di inizio pulizia *start* (formattato come AAAA-MM-GG) e giorno di fine pulizia *end* (= giorno dopo).
+
 <img src="https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/screenshots/elenco_strade_csv.png" width="500px"/>
+
 Il file .csv è poi stato importato in una tabella postgis
 
 ### estrazione da OpenStreetMap.
@@ -34,7 +36,8 @@ Da qui, attraverso una query SQL di join sul nome della strada contenuto nella t
 
 Una verifica manuale ha permesso di inviduare (dove possibile) i tratti di strade ed eventuali incongruenze sui nomi dovuti a cambi di toponomastica o toponomastica "locale" (es. "da Via Degasperi a *Macdonald)*").
 Da lì la conversione in [geoJSON](https://github.com/napo/lavaggio_strade_trento/blob/master/raw_data/lavaggio_strade.geojson) 
-<img src="https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/screenshots/geojson.png" width="300px"/>
+
+<img src="https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/screenshots/geojson.png" width="500px"/>
 
 Per la visualizzazione si è usato Leaflet e il plugin [Leaflet.timeline](http://skeate.github.io/Leaflet.timeline/) che richiede il caricamento di un file .jsonp.
 Il file è stato creato includendo il contenuto del geojson con l'istruzione "*onLoadData(...);*" 
