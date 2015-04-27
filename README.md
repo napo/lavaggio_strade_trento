@@ -2,11 +2,11 @@
 lavaggio strade Trento marzo-maggio 2015
 http://de.straba.us/lavaggio_strade_trento/
 
-## premessa
+## come nasce
 il Comune di Trento rilascia il calendario delle strade nel periodo marzo-maggio 2015 interessate al lavaggio a questo indirizzo
 http://www.comune.trento.it/Comunicazione/Il-Comune-informa/In-primo-piano/Lavaggio-notturno-strade2
 
-## il problema
+## il calendario del comune di Trento
 Il calendario è archiviato in un [PDF](https://github.com/napo/lavaggio_strade_trento/raw/master/raw_data/SPAZZAMENTO%20E%20LAVAGGIO%20NOTTURNO%202015.pdf) di difficile lettura (e interpretazione per chi non conosce la città).
 
 <img src="https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/screenshots/first_page_calendario_comune_trento_lavaggio_strade.png" width="500px"/>
@@ -44,6 +44,7 @@ Da lì la conversione in [geoJSON](https://github.com/napo/lavaggio_strade_trent
 Per la visualizzazione si è usato Leaflet e il plugin [Leaflet.timeline](http://skeate.github.io/Leaflet.timeline/) che richiede il caricamento di un file .jsonp.
 Il file è stato creato includendo il contenuto del geojson con l'istruzione "*onLoadData(...);*" 
 Il codice scritto può essere riadattato semplicemente sostituendo il file .jsonp
+Il sofware è rilasciato in [licenza MIT](https://github.com/napo/lavaggio_strade_trento/blob/master/LICENSE)
 
 ## uso della data visualization
 la visualizzazione di questi dati è accessibile a questo indirizzo http://de.straba.us/lavaggio_strade_trento/
@@ -55,3 +56,5 @@ Con il bottone "Localizzami" invece spostare la mappa in automatico dalle inform
 
 screenshot ![Alt 'le strade da pulire il 24 aprile 2014'](https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/img/lavaggio_strade_trento.png)
 
+# nota sui dati
+i dati generati nel file geojson sono da considerarsi con licenza ODbL in quanto derivati dai dati di OpenStreetMap
