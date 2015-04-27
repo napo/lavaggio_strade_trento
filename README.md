@@ -1,5 +1,7 @@
 # lavaggio_strade_Trento
 lavaggio strade Trento marzo-maggio 2015
+http://de.straba.us/lavaggio_strade_trento/
+
 ## premessa
 il Comune di Trento rilascia il calendario delle strade nel periodo marzo-maggio 2015 interessate al lavaggio a questo indirizzo
 http://www.comune.trento.it/Comunicazione/Il-Comune-informa/In-primo-piano/Lavaggio-notturno-strade2
@@ -43,7 +45,7 @@ Per la visualizzazione si è usato Leaflet e il plugin [Leaflet.timeline](http:/
 Il file è stato creato includendo il contenuto del geojson con l'istruzione "*onLoadData(...);*" 
 Il codice scritto può essere riadattato semplicemente sostituendo il file .jsonp
 
-== Applicazione
+## uso della data visualization
 la visualizzazione di questi dati è accessibile a questo indirizzo http://de.straba.us/lavaggio_strade_trento/
 Attraverso la barra orizzontale di scorrimento a fondo della mappa permette di cambiare la data.
 Al cambio vengono visualizzate le strade interessate.
