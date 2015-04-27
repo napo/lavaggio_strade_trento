@@ -34,7 +34,7 @@ Da qui, attraverso una query SQL di join sul nome della strada contenuto nella t
 
 Una verifica manuale ha permesso di inviduare (dove possibile) i tratti di strade ed eventuali incongruenze sui nomi dovuti a cambi di toponomastica o toponomastica "locale" (es. "da Via Degasperi a *Macdonald)*").
 Da lì la conversione in [geoJSON](https://github.com/napo/lavaggio_strade_trento/blob/master/raw_data/lavaggio_strade.geojson) 
-
+<img src="https://raw.githubusercontent.com/napo/lavaggio_strade_trento/master/raw_data/screenshots/geojson.png" width="300px"/>
 
 
 demo: http://de.straba.us/lavaggio_strade_trento/
