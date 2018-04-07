@@ -13,17 +13,15 @@
     <link rel="stylesheet" href="css/leaflet.timeline.css" />   
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="js/L.Control.Locate.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/leaflet.timeline.js"></script> 
   </head>
   <body>
     <div id="info">
       <h1>Lavaggio strade a Trento</h1>
-       <h2>ricavato dal <a href="http://www.comune.trento.it/Comunicazione/Il-Comune-informa/In-primo-piano/Lavaggio-notturno-strade2">calendario del Comune di Trento</a>
-       e <a href="http://osm-toolserver-italia.wmflabs.org/estratti/it/comuni">stradario dai dati di OpenStreetmap</a></h2>
-       Divieto di sosta dalle 19:00 del <span id="startday"></span><br/>
-       alle 05:00 del giorno dopo.<br/>
+       <h2>sulla base del <a href="https://dati.trentino.it/dataset/pulizia-strade-e-relativi-divieti-di-sosta">calendario</a> e del <a href="https://dati.trentino.it/dataset/grafo-stradale-vie-soggette-a-pulizia-strade">grafo stradale</a> opendata del <a href="http://www.comune.trento.it/">Comune di Trento</a></h2>
+       Divieto di sosta dalle 20:00 del <span id="startday"></span><br/>
+       alle 03:30 del giorno dopo.<br/>
        <h2>Elenco delle vie interessate</h2>
       <ul id="displayed-list"></ul>
       <p id="zoomtoarea"/>
