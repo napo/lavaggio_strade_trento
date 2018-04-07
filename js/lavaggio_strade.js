@@ -86,10 +86,10 @@
           },
            onEachFeature: function (feature, layer) {
                   streetname = ""
-                  if (feature.properties.limit != "NaN") {
-                    streetname = feature.properties.name + '<br/>' + '<span style="font-style:strong;font-size:xx-small;">'+feature.properties.limit+'</span>';
+                  if (feature.properties.note != null) {
+                    streetname = feature.properties.via + '<br/>' + '<span style="font-style:strong;font-size:xx-small;">'+feature.properties.note+'</span>';
                   } else {
-                    streetname = feature.properties.name
+                    streetname = feature.properties.via
                   }
                 layer.bindPopup(streetname);
             },
