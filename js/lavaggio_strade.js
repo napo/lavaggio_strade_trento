@@ -56,9 +56,9 @@
         if (street.properties) {
           if (street.properties.note != null) {
 
-            streetname = street.properties.via + '<br/><span style="font-style:strong;font-size:xx-small;">'+street.properties.note+'</span>';
+            streetname = street.properties.nome + '<br/><span style="font-style:strong;font-size:xx-small;">'+street.properties.note+'</span>';
           } else {
-            streetname = street.properties.via
+            streetname = street.properties.nome
           }
           if (streets.indexOf(streetname) == -1) {
             var li = document.createElement('li');
@@ -87,9 +87,9 @@
            onEachFeature: function (feature, layer) {
                   streetname = ""
                   if (feature.properties.note != null) {
-                    streetname = feature.properties.via + '<br/>' + '<span style="font-style:strong;font-size:xx-small;">'+feature.properties.note+'</span>';
+                    streetname = feature.properties.nome + '<br/>' + '<span style="font-style:strong;font-size:xx-small;">'+feature.properties.note+'</span>';
                   } else {
-                    streetname = feature.properties.via
+                    streetname = feature.properties.nome
                   }
                 layer.bindPopup(streetname);
             },
