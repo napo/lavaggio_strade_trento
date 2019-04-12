@@ -136,6 +136,7 @@
 	});
 	
 	map.addControl(searchControl);  
+	map.removeLayer(featuresLayer)
 /* to remove here */
 
     
