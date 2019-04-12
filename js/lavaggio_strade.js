@@ -111,7 +111,7 @@
 	var data = strade;
 	var featuresLayer = new L.GeoJSON(data, {
 			onEachFeature: function(feature, marker) {
-				marker.bindPopup('<h4>">'+ feature.properties.nome +'</h4>');
+				marker.bindPopup('<h4>'+ feature.properties.nome +'</h4>');
 			}
 		});
 
