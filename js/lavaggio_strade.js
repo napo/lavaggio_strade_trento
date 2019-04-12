@@ -115,14 +115,17 @@
 			}
 		});
 
-	//map.addLayer(featuresLayer);
+	map.addLayer(featuresLayer);
 	var searchControl = new L.Control.Search({
 		layer: featuresLayer,
 		propertyName: 'nome',
+		initial:false,
+		casesensitive: false,
 		marker: false,
 		moveToLocation: function(latlng, title, map) {
 			var zoom = map.getBoundsZoom(latlng.layer.getBounds());
 			map.setView(latlng, zoom); // access the zoom
+			latlng.layer.fire('click');
 		}
 	});
 	
