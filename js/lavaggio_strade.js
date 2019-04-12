@@ -115,7 +115,7 @@
 			}
 		});
 
-	map.addLayer(featuresLayer);
+	//map.addLayer(featuresLayer);
 	var searchControl = new L.Control.Search({
 		layer: featuresLayer,
 		propertyName: 'nome',
