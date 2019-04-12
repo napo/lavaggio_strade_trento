@@ -106,13 +106,50 @@
         });
         updateList(timeline);
       }
+
+/* to remove */
+	var data = strade;
+	var featuresLayer = new L.GeoJSON(data, {
+			onEachFeature: function(feature, marker) {
+				marker.bindPopup('<h4>">'+ feature.properties.nome +'</h4>');
+			}
+		});
+
+	map.addLayer(featuresLayer);
+	var searchControl = new L.Control.Search({
+		layer: featuresLayer,
+		propertyName: 'nome',
+		marker: false,
+		moveToLocation: function(latlng, title, map) {
+			var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+			map.setView(latlng, zoom); // access the zoom
+		}
+	});
+	
+	searchControl.on('search:locationfound', function(e) {
+		if(e.layer._popup)
+			e.layer.openPopup();
+	}).on('search:collapsed', function(e) {
+		featuresLayer.eachLayer(function(layer) {	
+			featuresLayer.resetStyle(layer);
+		});	
+	});
+	
+	map.addControl(searchControl);  
+/* to remove here */
+
     
-        var baseMaps = {
+	var baseMaps = {
                 "mapbox": mapbox,
                 "openstreetmap": maposm
                };
 
-            var overlayMaps = {
+    var overlayMaps = {
                "lavaggio": timeline
-            };	
-            L.control.layers(baseMaps, overlayMaps).addTo(map);
+    };	
+    
+	L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+
+
